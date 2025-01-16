@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iChat - Realtime Chat App</title>
+    <script defer src="http://localhost:8001/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="chatlogo.jpg" alt="">
+        <h1>Chat App</h1>
+    </nav>
+
+    <!-- Authentication Forms -->
+    <div id="auth-container">
+        <form id="signup-form">
+            <h3>Sign Up</h3>
+            <input type="text" id="signup-username" placeholder="Username" required />
+            <input type="password" id="signup-password" placeholder="Password" required />
+            <button type="submit">Sign Up</button>
+        </form>
+        <form id="login-form">
+            <h3>Login</h3>
+            <input type="text" id="login-username" placeholder="Username" required />
+            <input type="password" id="login-password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-container" style="display: none;">
+        <div class="side-menu" id="side-menu">
+            <button id="menu-toggle">☰</button>
+            <ul id="user-list"></ul>
+        </div>
+        <div class="container"></div>
+        <div class="send">
+            <form action="#" id="send-container">
+                <input type="text" name="messageInp" id="messageInp" autocomplete="off">
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

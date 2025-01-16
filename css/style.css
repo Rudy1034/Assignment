@@ -1,0 +1,270 @@
+/* .logo{
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+.container{
+    max-width:  855px;
+    border: 2px solid black;
+    margin: auto;
+    height: 50vh;
+    padding: 33px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.message{
+    background-color: grey;
+    width: 24%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgb(246, 245, 252), rgb(100, 85, 186));
+}
+
+#send-container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 950px;
+    
+}
+
+#messageInp{
+    width: 91%;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+}
+
+.btn{
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+} */
+/* General body styles */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(246, 245, 252), rgb(100, 85, 186));
+    font-family: Arial, sans-serif;
+}
+
+/* Logo and header */
+.logo {
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Authentication container */
+#auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#auth-container h3 {
+    margin-bottom: 20px;
+}
+
+#auth-container input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#auth-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #5b74c6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#auth-container button:hover {
+    background-color: #4656a1;
+}
+
+/* Chat container */
+.container {
+    max-width: 855px;
+    border: 2px solid black;
+    margin: auto;
+    height: 50vh;
+    padding: 33px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Chat messages */
+.message {
+    background-color: grey;
+    color: white;
+    width: 24%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.right {
+    float: right;
+    clear: both;
+}
+
+/* Input and send button */
+#send-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 950px;
+}
+
+#messageInp {
+    width: 91%;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+    padding: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+    background-color: #5b74c6;
+    color: white;
+    padding: 0 15px;
+}
+
+.btn:hover {
+    background-color: #4656a1;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5b74c6;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+nav img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .message {
+        width: 70%;
+    }
+
+    #messageInp {
+        width: 80%;
+    }
+
+    #auth-container {
+        width: 90%;
+    }
+}
+.side-menu {
+    position: fixed;
+    top: 105px; /* Adjust based on your navbar height */
+    left: 50px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.side-menu li:hover {
+    background-color: #575757;
+}
+
